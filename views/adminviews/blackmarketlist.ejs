@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cuba admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Cuba admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="pixelstrap">
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <title>Amway - Stock Count</title>
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
+    <!-- ico-font-->
+    <link rel="stylesheet" type="text/css" href="/css/vendors/icofont.css">
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="/css/vendors/themify.css">
+    <!-- Flag icon-->
+    <link rel="stylesheet" type="text/css" href="/css/vendors/flag-icon.css">
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="/css/vendors/feather-icon.css">
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="/css/vendors/datatables.css">
+    <!-- Plugins css Ends-->
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="/css/vendors/bootstrap.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link id="color" rel="stylesheet" href="/css/color-1.css" media="screen">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="/css/responsive.css">
+  </head>
+  <body>
+    <!-- Page Header Starts -->
+    <%- include('../includes/pageheader.ejs') %>
+    <!-- Page Header Ends -->
+      <!-- Page Body Start-->
+      <div class="page-body-wrapper sidebar-icon">
+        <!-- Page Sidebar Start-->
+        <%- include('../includes/adminnavigation.ejs') %>
+        <!-- Page Sidebar Ends-->
+        <div class="page-body">
+          <div class="container-fluid">
+            <div class="page-title">
+              <div class="row">
+                <!-- <div class="col-6">
+                  <h3>Support Ticket</h3>
+                </div> -->
+                <div class="col-12">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">                                       <i data-feather="home"></i></a></li>
+                    <li class="breadcrumb-item">Master Data</li>
+                    <li class="breadcrumb-item active">Location</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid starts-->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <h5>Blackmarket List</h5><span>List of all Blackmarkets.</span>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="text-right">
+                          <div class="form-group mb-0 mr-0"></div>
+                            <a class="btn btn-primary" href="/admin/blackmarket/import"> 
+                              <!-- <i data-feather="plus-square"> </i> -->
+                            Import</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="display" id="basic-6">
+                        <thead>
+                          <tr>
+                            <th>Seq</th>
+                            <th>SKU</th>
+                            <th>RecodeConfig</th>
+                          </tr>
+                        </thead>
+                        <tbody> 
+                        <% newBlackMarketItems.forEach(function(newBlackMarketItem){ %>
+                         <tr>
+                             <td> <%= newBlackMarketItem.Seq %> </td>
+                             <td> <%= newBlackMarketItem.SKU %> </td>
+                             <td> <%= newBlackMarketItem.RecodeConfig %> </td>
+                         </tr>
+                        <% }); %>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Container-fluid Ends-->
+        </div>
+        <!-- footer start-->
+        <%- include('../includes/footer.ejs') %>
+        <!-- footer end --> 
+      </div>
+    </div>
+    <!-- latest jquery-->
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="/js/bootstrap/popper.min.js"></script>
+    <script src="/js/bootstrap/bootstrap.js"></script>
+    <!-- feather icon js-->
+    <script src="/js/icons/feather-icon/feather.min.js"></script>
+    <script src="/js/icons/feather-icon/feather-icon.js"></script>
+    <!-- Sidebar jquery-->
+    <script src="/js/config.js"></script>
+    <!-- Plugins JS start-->
+    <script src="/js/sidebar-menu.js"></script>
+    <script src="/js/counter/jquery.waypoints.min.js"></script>
+    <script src="/js/counter/jquery.counterup.min.js"></script>
+    <script src="/js/counter/counter-custom.js"></script>
+    <script src="/js/datatable/datatables/jquery.dataTables.min.js"></script>
+    <script src="/js/support-ticket-custom.js"></script>
+    <script src="/js/tooltip-init.js"></script>
+    <!-- Plugins JS Ends-->
+    <!-- Theme js-->
+    <script src="/js/script.js"></script>
+    <!-- <script src="../assets/js/theme-customizer/customizer.js"></script> -->
+    <!-- login js-->
+    <!-- Plugin used-->
+  </body>
+</html>

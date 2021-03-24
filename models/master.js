@@ -1,0 +1,67 @@
+const {Sequelize} = require('sequelize');
+const sequelize = require('../util/database');
+
+const Master = sequelize.define('master', {
+    'id':{
+      type: Sequelize.INTEGER,
+      defaultvalue:Sequelize.UUIDV4,
+      autoIncrement:true,
+      allowNull:false,
+      primaryKey: true
+    },
+    'Item': Sequelize.STRING,
+    'Oracle Item': Sequelize.STRING,
+    'Item Revision': Sequelize.STRING,
+    'Item Description': Sequelize.STRING,
+    'Warehouse': Sequelize.STRING,
+    'Sales (Month to Date)': Sequelize.STRING,
+    'Balance Available (Minus Unshipped ISO & all ABO Orders)': Sequelize.STRING,
+    'Balance Available (Minus Unshipped ISO & Paid ABO Orders)': Sequelize.STRING,
+    'EA in Pallet': Sequelize.STRING,
+    'Net Weight': Sequelize.STRING,
+    'EA in Multipack': Sequelize.STRING,
+    'Pending Receiving WTO Qty': Sequelize.STRING,
+    'In-Transit WTO Qty': Sequelize.STRING,
+    'Open PO Qty': Sequelize.STRING,
+    'Local Flag': Sequelize.STRING,
+    'MTD PO/IR Receipts Qty': Sequelize.STRING,
+    'Positive MTD Adj Qty': Sequelize.STRING,
+    'Negative MTD Adj Qty': Sequelize.STRING,
+    'Expense Line MTD Qty': Sequelize.STRING,
+    'Yesterday ABO Shipped Qty': Sequelize.STRING,
+    'Mortgaged ABO Qty': Sequelize.STRING,
+    'Mortgaged ABO Qty PAID': Sequelize.STRING,
+    'Mortgaged ABO Qty UNPAID': Sequelize.STRING,
+    'BackOrdered ABO Order Qty': Sequelize.STRING,
+    'Mortgaged WTO Qty': Sequelize.STRING,
+    'Subinventory PICKLINE Qty': Sequelize.STRING,
+    'Subinventory XREWK Qty': Sequelize.STRING,
+    'Subinventory TEST Qty': Sequelize.STRING,
+    'Subinventory ABGIL Qty': Sequelize.STRING,
+    'Subinventory STORAGE Qty': Sequelize.STRING,
+    'Subinventory STAGING Qty': Sequelize.STRING,
+    'Subinventory DAMAGE Qty': Sequelize.STRING,
+    'Subinventory BONDED Qty': Sequelize.STRING,
+    'Subinventory NIR Qty': Sequelize.STRING,
+    'Subinventory RIR Qty': Sequelize.STRING,
+    'Subinventory OVERLABEL Qty': Sequelize.STRING,
+    'Order Fixed Qty': Sequelize.STRING,
+    'Mortgaged work order Qty': Sequelize.STRING,
+    'In-transit Qurantine Qty': Sequelize.STRING,
+    'In-transit Xrework Qty': Sequelize.STRING,
+    'In-transit Approved Qty': Sequelize.STRING,
+    'Total In-transit Qty': Sequelize.STRING,
+    'Reference Old SKU': Sequelize.STRING,
+    'Subinventory HOLD Qty': Sequelize.STRING,
+    'Subinventory DISPLAY Qty': Sequelize.STRING,
+    'Subinventory CAFE Qty': Sequelize.STRING,
+    'Subinventory REPAIR Qty': Sequelize.STRING,
+    'Subinventory VARIANCE Qty': Sequelize.STRING,
+    'Flag':{
+      type: Sequelize.STRING,
+      defaultValue: "Y"
+    },
+    'Barcode': Sequelize.STRING
+});
+
+module.exports = Master;

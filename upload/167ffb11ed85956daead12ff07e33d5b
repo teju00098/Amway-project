@@ -1,0 +1,6 @@
+Warehouse,OracleItem,SubInv,Location,Qty,Team,User,UpdatedateTime
+W21,100186TH,Pickline,Gondala1,10,Team B,User1,Some time date
+W17,100186TH,Xwerk,Gondala2,22,Team B,User2,Some time date 1
+W39,100186TH,Hold,CA1,67,Team B,User3,some time date 2
+W24,100186TH,Display,ART2,89,Team B,User4,some time date 3
+w83,100186TH,Pickline,Abgil,75,Team B,User 5,some time date 4
